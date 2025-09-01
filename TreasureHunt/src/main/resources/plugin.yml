@@ -1,0 +1,14 @@
+name: TreasureHunt
+version: '1.0'
+main: me.merch.TreasureHunt
+api-version: '1.21'
+author: Merch
+description: A plugin to manage custom treasures across the world
+commands:
+  treasure:
+    description: Manage treasures
+    usage: /<command> <create|delete|completed|list|gui|help>
+permissions:
+  treasure.admin:
+    description: Access to all treasure commands
+    default: op

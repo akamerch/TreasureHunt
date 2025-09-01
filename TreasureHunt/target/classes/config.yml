@@ -1,0 +1,67 @@
+database:
+  enabled: false
+  host: localhost
+  port: 3306
+  name: treasurehunt
+  username: root
+  password: password
+  pool-size: 10
+
+messages:
+  no-permission: "&cYou don't have permission to do that!"
+  usage: "&eUsage: /treasure <create|delete|completed|list|gui|help>"
+  treasure-created: "&aTreasure successfully created!"
+  treasure-deleted: "&cTreasure successfully deleted!"
+  treasure-already-claimed: "&eYou already claimed this treasure!"
+  treasure-not-found: "&cTreasure not found!"
+  treasure-claimed: "&aYou found a treasure!"
+  click-to-create: "&aClick on a block to set it as the treasure!"
+  players-found: "&aPlayers who found &e%treasure%&a:"
+  no-players-found: "&eNo players have found this treasure yet!"
+  help-title: "&6&m------------------------------"
+  help-commands:
+    - "&6/treasure create <id> <command> &7- Create a treasure"
+    - "&6/treasure delete <id> &7- Delete a treasure"
+    - "&6/treasure completed <id> &7- View completed players"
+    - "&6/treasure list &7- List all treasures"
+    - "&6/treasure gui &7- Open treasure manager GUI"
+    - "&6/treasure help &7- Show this help"
+    - "&6&m------------------------------"
+
+gui:
+  title: "&8Treasure Menu"
+  size: 54
+
+  treasure-item:
+    material: DECORATED_POT
+    name: "&8» &6%id% &8«"
+    lore:
+      - "&8Treasure"
+      - "&7"
+      - "&6» &7ID: %id%"
+      - "&7"
+      - "&6» &aLeft-Click: &7Teleport to this treasure"
+      - "&6» &cRight-Click: &7Delete this treasure"
+      - "&7"
+
+  items:
+    close:
+      material: BARRIER
+      name: "&8» &cClose Menu &8«"
+      lore:
+        - "&8Button"
+        - "&7"
+        - "&6» &7Click to close the menu"
+        - "&7"
+      slot: 53
+    info:
+      material: BOOK
+      name: "&8» &6Information &8«"
+      lore:
+        - "&8Info"
+        - "&7"
+        - "&6» &7Manage all your treasures here,"
+        - "&6» &7Left-Click on treasure to teleport,"
+        - "&6» &7Right-Click on treasure to delete!"
+        - "&7"
+      slot: 49
